@@ -25,8 +25,22 @@
 // console.log(culAge2(1999));
 
 
-const printName = (firstName) =>{
-   return `My name is ${firstName}`
+// const printName = (firstName) =>{
+//    return `My name is ${firstName}`
+// }
+
+// console.log(printName("Reza"));
+
+const cutFruitPieces = (fruit) =>{
+    return fruit * 4
 }
 
-console.log(printName("Reza"));
+
+const fruitProcessor = (apples,oranges) =>{
+    const applePieces = cutFruitPieces(apples)
+    const orangePieces = cutFruitPieces(oranges)
+    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange` 
+    return juice
+}
+
+console.log(fruitProcessor(2,3));
