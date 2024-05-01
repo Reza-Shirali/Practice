@@ -73,3 +73,8 @@ console.log(arrayOne);
 arrayOne.unshift("Esteghlal")
 console.log(arrayOne);
 
+arrayOne.pop()
+console.log(arrayOne);
+
+arrayOne.shift()
+console.log(arrayOne);
