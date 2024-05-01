@@ -93,17 +93,17 @@
 // console.log(tips);
 // console.log(total);
 
-const myObj = {
-  firstName: "reza",
-  lastName:"Shirali",
-  age: 2024-2000,
-  job: "Front End Developer"
-}
+// const myObj = {
+//   firstName: "reza",
+//   lastName:"Shirali",
+//   age: 2024-2000,
+//   job: "Front End Developer"
+// }
 
-const interestedIn = prompt(`what do you want to know about reza? Choose between firstName , lastName , age , job`)
-console.log(interestedIn);
+// const interestedIn = prompt(`what do you want to know about reza? Choose between firstName , lastName , age , job`)
+// console.log(interestedIn);
 
-alert(myObj[interestedIn])
+// alert(myObj[interestedIn])
 
 // console.log(myObj.age);
 // console.log(myObj['lastName']);
@@ -111,3 +111,44 @@ alert(myObj[interestedIn])
 // const name = "Name"
 
 // console.log(myObj['first' + name]);
+
+// const jonas = {
+//   firstName:"Jonas",
+//   bestFriends:["Ali","mmd","reza"]
+// }
+
+// const string = `${jonas.firstName} has ${jonas.bestFriends.length} , and his best friend is called ${jonas.bestFriends[0]}`
+// console.log(string);
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBmi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBmi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+if (john.calcBmi() > mark.calcBmi()) {
+  console.log(
+    `${john.fullName}'s BMI (${Math.round(john.bmi)}) is higher than ${
+      mark.fullName
+    }'s (${Math.round(mark.calcBmi())})`
+  );
+} else {
+  console.log(
+    `${mark.fullName}'s BMI (${Math.round(mark.bmi)}) is higher than ${
+      john.fullName
+    }'s (${Math.round(john.calcBmi())})`
+  );
+}
