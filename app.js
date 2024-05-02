@@ -157,12 +157,32 @@
 //   console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
 // }
 
-const years = [1990, 2000, 2010, 2020, 2024];
+// const years = [1990, 2000, 2010, 2020, 2024];
 
-const ages = [];
+// const ages = [];
 
-for (let i = 0; i < years.length ; i++) {
-  ages.push(2037 - years[i]);
+// for (let i = 0; i < years.length ; i++) {
+//   ages.push(2037 - years[i]);
+// }
+
+// console.log(ages);
+
+const jonas = [
+  "jonas",
+  2034 - 2000,
+  "shirali",
+  true,
+  ["mehdi", "ali", "kasra"],
+];
+
+console.log(`--- ONLY STRING ---`);
+for(let i = 0 ; i < jonas.length ; i++){
+  if(typeof jonas[i] !== 'string') continue
+  console.log(jonas[i] , typeof jonas[i]);
 }
 
-console.log(ages);
+console.log(`--- BREAK WITH NUMBER`);
+for(let i = 0 ; i <jonas.length ; i++){
+  if(typeof jonas[i] === "number") break;
+  console.log(jonas[i]);
+}
