@@ -200,10 +200,51 @@
 //   rep++;
 // }
 
-let dice = Math.trunc(Math.random() * 6) + 1;
+// let dice = Math.trunc(Math.random() * 6) + 1;
 
-while (dice !== 6) {
-  console.log(`You rolled a ${dice}`);
-  dice = Math.trunc(Math.random() * 6) + 1;
-  if (dice === 6) console.log(`Loop is about to end...`);
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log(`Loop is about to end...`);
+// }
+
+const calcTip = (bill) => {
+  if (bill > 50 && bill < 300) {
+    const tip = bill * 0.15;
+    tips.push(tip);
+    totals.push(bill + tip);
+  } else {
+    const tip = bill * 0.2;
+    tips.push(tip);
+    totals.push(bill + tip);
+  }
+};
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+
+for (let i = 0; i < bills.length; i++) {
+  calcTip(bills[i]);
 }
+
+console.log(tips);
+console.log(totals);
+
+// BONUS
+
+const calcAverage = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  const ave = sum / arr.length;
+  return `Average is : ${ave}`;
+};
+
+let input = [];
+for (let i = 0; i < tips.length; i++) {
+  const value = Math.trunc(tips[i]);
+  input.push(value);
+}
+console.log(calcAverage(input));
