@@ -223,7 +223,6 @@
 // const tips = [];
 // const totals = [];
 
-
 // for (let i = 0; i < bills.length; i++) {
 //   calcTip(bills[i]);
 // }
@@ -249,4 +248,26 @@
 // }
 // console.log(calcAverage(input));
 
+const temperaturesOne = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5,112];
+const temperaturesTwo = [15, 16, 2, 80, -46, 64, 70];
 
+const calcTempAmplitude = (tempsOne,tempsTwo) => {
+  const temps = [...tempsOne, ...tempsTwo];
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    if (typeof temps[i] !== "number") continue;
+    if (max < temps[i]) {
+      max = temps[i];
+    }
+    if (min > temps[i]) {
+      min = temps[i];
+    }
+  }
+  console.log(min, max);
+  return max - min;
+};
+
+const amplitude = calcTempAmplitude(temperaturesOne,temperaturesTwo);
+
+console.log(amplitude);
