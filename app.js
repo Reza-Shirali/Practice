@@ -120,35 +120,40 @@
 // const string = `${jonas.firstName} has ${jonas.bestFriends.length} , and his best friend is called ${jonas.bestFriends[0]}`
 // console.log(string);
 
-const mark = {
-  fullName: "Mark Miller",
-  mass: 78,
-  height: 1.69,
-  calcBmi: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
-const john = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
-  calcBmi: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBmi: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBmi: function () {
+//     this.bmi = this.mass / this.height ** 2;
+//     return this.bmi;
+//   },
+// };
 
-if (john.calcBmi() > mark.calcBmi()) {
-  console.log(
-    `${john.fullName}'s BMI (${Math.round(john.bmi)}) is higher than ${
-      mark.fullName
-    }'s (${Math.round(mark.calcBmi())})`
-  );
-} else {
-  console.log(
-    `${mark.fullName}'s BMI (${Math.round(mark.bmi)}) is higher than ${
-      john.fullName
-    }'s (${Math.round(john.calcBmi())})`
-  );
+// if (john.calcBmi() > mark.calcBmi()) {
+//   console.log(
+//     `${john.fullName}'s BMI (${Math.round(john.bmi)}) is higher than ${
+//       mark.fullName
+//     }'s (${Math.round(mark.calcBmi())})`
+//   );
+// } else {
+//   console.log(
+//     `${mark.fullName}'s BMI (${Math.round(mark.bmi)}) is higher than ${
+//       john.fullName
+//     }'s (${Math.round(john.calcBmi())})`
+//   );
+// }
+
+for(let rep = 1 ; rep <=10;rep++){
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
 }
+
