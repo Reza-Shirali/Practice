@@ -153,7 +153,16 @@
 //   );
 // }
 
-for(let rep = 1 ; rep <=10;rep++){
-  console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+// for(let rep = 1 ; rep <=10;rep++){
+//   console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+// }
+
+const years = [1990, 2000, 2010, 2020, 2024];
+
+const ages = [];
+
+for (let i = 0; i < years.length ; i++) {
+  ages.push(2037 - years[i]);
 }
 
+console.log(ages);
