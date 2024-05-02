@@ -167,22 +167,29 @@
 
 // console.log(ages);
 
-const jonas = [
-  "jonas",
-  2034 - 2000,
-  "shirali",
-  true,
-  ["mehdi", "ali", "kasra"],
-];
+// const jonas = [
+//   "jonas",
+//   2034 - 2000,
+//   "shirali",
+//   true,
+//   ["mehdi", "ali", "kasra"],
+// ];
 
-console.log(`--- ONLY STRING ---`);
-for(let i = 0 ; i < jonas.length ; i++){
-  if(typeof jonas[i] !== 'string') continue
-  console.log(jonas[i] , typeof jonas[i]);
-}
+// console.log(`--- ONLY STRING ---`);
+// for(let i = 0 ; i < jonas.length ; i++){
+//   if(typeof jonas[i] !== 'string') continue
+//   console.log(jonas[i] , typeof jonas[i]);
+// }
 
-console.log(`--- BREAK WITH NUMBER`);
-for(let i = 0 ; i <jonas.length ; i++){
-  if(typeof jonas[i] === "number") break;
-  console.log(jonas[i]);
+// console.log(`--- BREAK WITH NUMBER`);
+// for(let i = 0 ; i <jonas.length ; i++){
+//   if(typeof jonas[i] === "number") break;
+//   console.log(jonas[i]);
+// }
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`---- Starting exercise ${exercise} ----`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise} : Lifting weight  repetition ${rep}🏋️‍♂️`);
+  }
 }
