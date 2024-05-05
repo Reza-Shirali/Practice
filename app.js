@@ -299,21 +299,34 @@
 // console.log(`--- Test Two ---`);
 // printForecast(testTwo)
 
-const calcAge = (birthYear) => {
-  const age = 2037 - birthYear
+// const calcAge = (birthYear) => {
+//   const age = 2037 - birthYear
 
-  const printAge = () => {
-    const output = `${firstName}, You are ${age} , born in ${birthYear}`
-    console.log(output);
+//   const printAge = () => {
+//     const output = `${firstName}, You are ${age} , born in ${birthYear}`
+//     console.log(output);
+
+//     if(birthYear>=1991 && birthYear <=1996){
+//       const str = `Oh, and you are a millenial,${firstName}`
+//       console.log(str);
+//     }
+//   }
+//   printAge()
+//   return age
+// }
+// const firstName = "Reza"
+// calcAge(1991)
+
+const reza = {
+  firstName: "Reza",
+  lastName: "shirali",
+  age: 24,
+};
 
 
-    if(birthYear>=1991 && birthYear <=1996){
-      const str = `Oh, and you are a millenial,${firstName}`
-      console.log(str);
-    }
-  }
-  printAge()
-  return age
-}
-const firstName = "Reza"
-calcAge(1991)
+const rezaAfterChangeLastName = Object.assign({}, reza);
+rezaAfterChangeLastName.lastName = "Miladi";
+rezaAfterChangeLastName.age = 27;
+
+console.log(reza);
+console.log(rezaAfterChangeLastName);
