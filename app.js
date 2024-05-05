@@ -317,24 +317,24 @@
 // const firstName = "Reza"
 // calcAge(1991)
 
-const reza = {
-  firstName: "Reza",
-  lastName: "shirali",
-  age: 24,
-};
+// const reza = {
+//   firstName: "Reza",
+//   lastName: "shirali",
+//   age: 24,
+// };
 
-const tina = {
-  firstName: "tina",
-  lastName: "Zohouri",
-  age: 22,
-};
+// const tina = {
+//   firstName: "tina",
+//   lastName: "Zohouri",
+//   age: 22,
+// };
 
-Object.assign(reza,tina);
+// Object.assign(reza,tina);
 // rezaAfterChangeLastName.lastName = "Miladi";
 // rezaAfterChangeLastName.age = 27;
 
 // console.log(reza);
 // console.log(rezaAfterChangeLastName);
 
-console.log(tina);
-console.log(reza);
+// console.log(tina);
+// console.log(reza);
