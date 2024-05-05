@@ -284,17 +284,36 @@
 
 // console.log(measureKelvin());
 
-const testOne = [17, 21, 23];
-const testTwo = [12, 5, -5, 0, 4];
+// const testOne = [17, 21, 23];
+// const testTwo = [12, 5, -5, 0, 4];
 
-const printForecast = (arr) => {
-  let str = "";
-  for (let i = 0; i < arr.length; i++) {
-    str += `${arr[i]}°C in ${i + 1} days... `;
+// const printForecast = (arr) => {
+//   let str = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     str += `${arr[i]}°C in ${i + 1} days... `;
+//   }
+//   console.log('... '+str);
+// };
+// console.log(`--- Test One ---`)
+// printForecast(testOne)
+// console.log(`--- Test Two ---`);
+// printForecast(testTwo)
+
+const calcAge = (birthYear) => {
+  const age = 2037 - birthYear
+
+  const printAge = () => {
+    const output = `${firstName}, You are ${age} , born in ${birthYear}`
+    console.log(output);
+
+
+    if(birthYear>=1991 && birthYear <=1996){
+      const str = `Oh, and you are a millenial,${firstName}`
+      console.log(str);
+    }
   }
-  console.log('... '+str);
-};
-console.log(`--- Test One ---`)
-printForecast(testOne)
-console.log(`--- Test Two ---`);
-printForecast(testTwo)
+  printAge()
+  return age
+}
+const firstName = "Reza"
+calcAge(1991)
