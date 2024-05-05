@@ -323,10 +323,18 @@ const reza = {
   age: 24,
 };
 
+const tina = {
+  firstName: "tina",
+  lastName: "Zohouri",
+  age: 22,
+};
 
-const rezaAfterChangeLastName = Object.assign({}, reza);
-rezaAfterChangeLastName.lastName = "Miladi";
-rezaAfterChangeLastName.age = 27;
+Object.assign(reza,tina);
+// rezaAfterChangeLastName.lastName = "Miladi";
+// rezaAfterChangeLastName.age = 27;
 
+// console.log(reza);
+// console.log(rezaAfterChangeLastName);
+
+console.log(tina);
 console.log(reza);
-console.log(rezaAfterChangeLastName);
