@@ -485,9 +485,9 @@ const restaurant = {
 // const x = [10,20,30,40,50]
 // add(...x)
 
-restaurant.numGuests = 0;
-const guest =  restaurant.numGuests || 10
-console.log(guest);
+// restaurant.numGuests = 0;
+// const guest =  restaurant.numGuests || 10
+// console.log(guest);
 
-const guestCorrect = restaurant.numGuests ?? 10;
-console.log(guestCorrect);
+// const guestCorrect = restaurant.numGuests ?? 10;
+// console.log(guestCorrect);
