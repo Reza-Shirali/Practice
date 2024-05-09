@@ -362,6 +362,10 @@ const restaurant = {
   order: function (startIndex, mainIndex) {
     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
   },
+  orderDelivery : function({address , mainIndex,time,startIndex
+  }){
+    console.log(address,time,startIndex,mainIndex);
+  }
 };
 
 // let [starter, main] = restaurant.categories;
@@ -387,5 +391,12 @@ const restaurant = {
 // } = restaurant;
 // console.log(restaurantName, hours, tags);
 
-const {menu = [] , starterMenu : starter = []} = restaurant
-console.log(menu , starter);
+// const {menu = [] , starterMenu : starter = []} = restaurant
+// console.log(menu , starter);
+
+restaurant.orderDelivery({
+  time:"22:30",
+  address:"Via del Sole , 21",
+  mainIndex :2 ,
+  startIndex : 2
+})
