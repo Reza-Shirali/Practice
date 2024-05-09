@@ -345,6 +345,9 @@ const restaurant = {
   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
+  order : function (startIndex , mainIndex){
+    return [this.starterMenu[startIndex],this.mainMenu[mainIndex]]
+  }
 };
 
 let [starter, main] = restaurant.categories;
@@ -353,3 +356,7 @@ console.log(starter, main);
 [starter, main] = [main, starter];
 
 console.log(starter, main);
+
+
+const [startCourse , mainCourse] = restaurant.order(2,0)
+console.log(startCourse , mainCourse);
