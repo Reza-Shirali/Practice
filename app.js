@@ -339,6 +339,68 @@
 // console.log(tina);
 // console.log(d);
 
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0,
+//       close: 24,
+//     },
+//   },
+//   order: function (startIndex, mainIndex) {
+//     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelivery : function({address , mainIndex,time,startIndex
+//   }){
+//     console.log(address,time,startIndex,mainIndex);
+//   }
+// };
+
+// let [starter, main] = restaurant.categories;
+// console.log(starter, main);
+
+// [starter, main] = [main, starter];
+
+// console.log(starter, main);
+
+// const [startCourse , mainCourse] = restaurant.order(2,0)
+// console.log(startCourse , mainCourse);
+
+// const nested = [2,4,[8,9]]
+// const [first,second] = nested
+// const [i,,[j,m]] = nested
+// console.log(i,j,m);
+
+// // const {name , openingHours , categories} = restaurant
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
+
+// const {menu = [] , starterMenu : starter = []} = restaurant
+// console.log(menu , starter);
+
+// restaurant.orderDelivery({
+//   time:"22:30",
+//   address:"Via del Sole , 21",
+//   mainIndex :2 ,
+//   startIndex : 2
+// })
+
 const restaurant = {
   name: "Classico Italiano",
   location: "via Angelo Tavanti 23, Firenze, Italy",
@@ -368,35 +430,10 @@ const restaurant = {
   }
 };
 
-// let [starter, main] = restaurant.categories;
-// console.log(starter, main);
+const arr = [1,2,3]
+const newArr = [...arr,4,5,6]
+console.log(newArr);
+console.log(...newArr);
 
-// [starter, main] = [main, starter];
-
-// console.log(starter, main);
-
-// const [startCourse , mainCourse] = restaurant.order(2,0)
-// console.log(startCourse , mainCourse);
-
-// const nested = [2,4,[8,9]]
-// const [first,second] = nested
-// const [i,,[j,m]] = nested
-// console.log(i,j,m);
-
-// // const {name , openingHours , categories} = restaurant
-// const {
-//   name: restaurantName,
-//   openingHours: hours,
-//   categories: tags,
-// } = restaurant;
-// console.log(restaurantName, hours, tags);
-
-// const {menu = [] , starterMenu : starter = []} = restaurant
-// console.log(menu , starter);
-
-restaurant.orderDelivery({
-  time:"22:30",
-  address:"Via del Sole , 21",
-  mainIndex :2 ,
-  startIndex : 2
-})
+const newMenu = [...restaurant.mainMenu,"Kabab"]
+console.log(newMenu);
