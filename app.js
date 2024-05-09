@@ -424,16 +424,36 @@ const restaurant = {
   order: function (startIndex, mainIndex) {
     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
   },
-  orderDelivery : function({address , mainIndex,time,startIndex
-  }){
-    console.log(address,time,startIndex,mainIndex);
-  }
+  orderDelivery: function ({ address, mainIndex, time, startIndex }) {
+    console.log(address, time, startIndex, mainIndex);
+  },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your declicious pasta with ${ing1},${ing2},${ing3}`);
+  },
 };
 
-const arr = [1,2,3]
-const newArr = [...arr,4,5,6]
-console.log(newArr);
-console.log(...newArr);
+const ingredients = [
+  prompt(`Let's make pasta! Ingredient 1?`),
+  prompt(`Let's make pasta! Ingredient 2?`),
+  prompt(`Let's make pasta! Ingredient 3?`),
+];
 
-const newMenu = [...restaurant.mainMenu,"Kabab"]
-console.log(newMenu);
+restaurant.orderPasta(...ingredients);
+
+// const arr = [1,2,3]
+// const newArr = [...arr,4,5,6]
+// console.log(newArr);
+// console.log(...newArr);
+
+// let newMenu = [...restaurant.mainMenu,"Kabab"]
+// console.log(newMenu);
+
+// // Copy array
+// const copyNewMenu = [...newMenu]
+// newMenu = [...newMenu,"Khoresht"]
+// console.log(newMenu);
+// console.log(copyNewMenu);
+
+// // Join 2 Array
+// const menu = [...restaurant.starterMenu,...restaurant.mainMenu]
+// console.log(menu);
