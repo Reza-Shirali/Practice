@@ -314,27 +314,40 @@
 //   printAge()
 //   return age
 // }
-// const firstName = "Reza"
+// const firstName = "j"
 // calcAge(1991)
 
-// const reza = {
-//   firstName: "Reza",
-//   lastName: "shirali",
+// const j = {
+//   firstName: "j",
+//   lastName: "a",
 //   age: 24,
 // };
 
 // const tina = {
 //   firstName: "tina",
-//   lastName: "Zohouri",
+//   lastName: "a",
 //   age: 22,
 // };
 
-// Object.assign(reza,tina);
-// rezaAfterChangeLastName.lastName = "Miladi";
-// rezaAfterChangeLastName.age = 27;
+// Object.assign(j,tina);
+// dAfterChangeLastName.lastName = "a";
+// dAfterChangeLastName.age = 27;
 
-// console.log(reza);
-// console.log(rezaAfterChangeLastName);
+// console.log(d);
+// console.log(d);
 
 // console.log(tina);
-// console.log(reza);
+// console.log(d);
+
+
+const restaurant = {
+  name:'Classico Italiano',
+  location: 'via Angelo Tavanti 23, Firenze, Italy',
+  categories:["Italian","Pizzeria","Vegetarian","Organic"],
+  starterMenu:["Focaccia","Bruschetta","Garlic Bread","Caprese Salad"],
+  mainMenu:["Pizza","Pasta","Risotto"]
+}
+
+
+const [starter , main ] = restaurant.categories
+console.log(starter , main);
