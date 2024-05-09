@@ -360,3 +360,9 @@ console.log(starter, main);
 
 const [startCourse , mainCourse] = restaurant.order(2,0)
 console.log(startCourse , mainCourse);
+
+
+const nested = [2,4,[8,9]]
+// const [first,second] = nested
+const [i,,[j,m]] = nested
+console.log(i,j,m);
