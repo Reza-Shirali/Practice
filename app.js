@@ -432,13 +432,13 @@ const restaurant = {
   },
 };
 
-const ingredients = [
-  prompt(`Let's make pasta! Ingredient 1?`),
-  prompt(`Let's make pasta! Ingredient 2?`),
-  prompt(`Let's make pasta! Ingredient 3?`),
-];
+// const ingredients = [
+//   prompt(`Let's make pasta! Ingredient 1?`),
+//   prompt(`Let's make pasta! Ingredient 2?`),
+//   prompt(`Let's make pasta! Ingredient 3?`),
+// ];
 
-restaurant.orderPasta(...ingredients);
+// restaurant.orderPasta(...ingredients);
 
 // const arr = [1,2,3]
 // const newArr = [...arr,4,5,6]
@@ -457,3 +457,13 @@ restaurant.orderPasta(...ingredients);
 // // Join 2 Array
 // const menu = [...restaurant.starterMenu,...restaurant.mainMenu]
 // console.log(menu);
+
+const arr = [1, 2, 3, ...[4, 5, 6]];
+console.log(arr);
+
+const [a, b, ...others] = [1, 2, 3, 4,];
+console.log(a,b,others);
+
+const [pizza,,risotto,...otherFood] =  [...restaurant.mainMenu,...restaurant.starterMenu]
+
+console.log(pizza,risotto,otherFood);
