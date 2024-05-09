@@ -471,14 +471,23 @@ const restaurant = {
 // const {sat , ...weekDays} = restaurant.openingHours;
 // console.log(sat,weekDays);
 
-const add = (...numbers) => {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  console.log(sum);
-};
+// const add = (...numbers) => {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   console.log(sum);
+// };
 
-add(2, 5);
-add(2, 5, 8, 9);
-add(2, 5, 15, 18);
+// add(2, 5);
+// add(2, 5, 8, 9);
+// add(2, 5, 15, 18);
+// const x = [10,20,30,40,50]
+// add(...x)
+
+restaurant.numGuests = 0;
+const guest =  restaurant.numGuests || 10
+console.log(guest);
+
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
