@@ -458,15 +458,27 @@ const restaurant = {
 // const menu = [...restaurant.starterMenu,...restaurant.mainMenu]
 // console.log(menu);
 
-const arr = [1, 2, 3, ...[4, 5, 6]];
-console.log(arr);
+// const arr = [1, 2, 3, ...[4, 5, 6]];
+// console.log(arr);
 
-const [a, b, ...others] = [1, 2, 3, 4,];
-console.log(a,b,others);
+// const [a, b, ...others] = [1, 2, 3, 4,];
+// console.log(a,b,others);
 
-const [pizza,,risotto,...otherFood] =  [...restaurant.mainMenu,...restaurant.starterMenu]
+// const [pizza,,risotto,...otherFood] =  [...restaurant.mainMenu,...restaurant.starterMenu]
 
-console.log(pizza,risotto,otherFood);
+// console.log(pizza,risotto,otherFood);
 
-const {sat , ...weekDays} = restaurant.openingHours;
-console.log(sat,weekDays);
+// const {sat , ...weekDays} = restaurant.openingHours;
+// console.log(sat,weekDays);
+
+const add = (...numbers) => {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 5);
+add(2, 5, 8, 9);
+add(2, 5, 15, 18);
