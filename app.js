@@ -491,3 +491,25 @@ const restaurant = {
 
 // const guestCorrect = restaurant.numGuests ?? 10;
 // console.log(guestCorrect);
+
+const restOne = {
+  name: "Capri",
+  // numGuests: 20,
+  numGuests : 0
+};
+
+const restTwo = {
+  name: "La Piazza",
+  owner: "Giovanni Rossi",
+};
+
+restOne.numGuests ??= 10;
+restTwo.numGuests ??= 10;
+console.log(restOne.numGuests);
+console.log(restTwo.numGuests);
+
+
+restOne.owner &&= "ANONYMOUS"
+restTwo.owner &&= "ANONYMOUS"
+console.log(restOne);
+console.log(restTwo);
