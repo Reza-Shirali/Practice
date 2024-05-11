@@ -589,36 +589,36 @@
 //  team1 > team2 && console.log(`Team 2 is more likely to win`);
 //  team1 < team2 && console.log(`Team 1 is more likely to win`);
 
-const restaurant = {
-  name: "Classico Italiano",
-  location: "via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0,
-      close: 24,
-    },
-  },
-  order: function (startIndex, mainIndex) {
-    return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
-  },
-  orderDelivery: function ({ address, mainIndex, time, startIndex }) {
-    console.log(address, time, startIndex, mainIndex);
-  },
-  orderPasta: function (ing1, ing2, ing3) {
-    console.log(`Here is your declicious pasta with ${ing1},${ing2},${ing3}`);
-  },
-};
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0,
+//       close: 24,
+//     },
+//   },
+//   order: function (startIndex, mainIndex) {
+//     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelivery: function ({ address, mainIndex, time, startIndex }) {
+//     console.log(address, time, startIndex, mainIndex);
+//   },
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(`Here is your declicious pasta with ${ing1},${ing2},${ing3}`);
+//   },
+// };
 
 // const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 
@@ -630,17 +630,62 @@ const restaurant = {
 //   console.log(`${i + 1}: ${item} `);
 // }
 
-console.log(restaurant.openingHours.mon?.open);
-console.log(restaurant.openingHours.fri?.open);
+// console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours.fri?.open);
 
-const days = ['mon','tue','wed','thu','fri','sat','sun']
+// const days = ['mon','tue','wed','thu','fri','sat','sun']
 
-for(const day of days){
-  const open = restaurant.openingHours[day]?.open ?? "closed";
-  console.log(`On ${day}, we open at ${open}`);
-}
+// for(const day of days){
+//   const open = restaurant.openingHours[day]?.open ?? "closed";
+//   console.log(`On ${day}, we open at ${open}`);
+// }
 
 
-const users = [{name:"jonas", email:"shir.ez.alioffical@gmail.com"}]
+// const users = [{name:"jonas", email:"shir.ez.alioffical@gmail.com"}]
 
-console.log(users[0]?.name ?? "User array empty");
+// console.log(users[0]?.name ?? "User array empty");
+
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0,
+//       close: 24,
+//     },
+//   },
+//   order: function (startIndex, mainIndex) {
+//     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelivery: function ({ address, mainIndex, time, startIndex }) {
+//     console.log(address, time, startIndex, mainIndex);
+//   },
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(`Here is your declicious pasta with ${ing1},${ing2},${ing3}`);
+//   },
+// };
+
+// const properties = Object.keys(restaurant.openingHours)
+// console.log(properties);
+
+// let openStr = `we are open on ${properties.length} days: `
+
+// for(const day of properties){
+//   openStr += `${day}, `
+// }
+
+// console.log(openStr);
+
+// const value = Object.values(restaurant.openingHours)
+// console.log(value);
