@@ -640,7 +640,6 @@
 //   console.log(`On ${day}, we open at ${open}`);
 // }
 
-
 // const users = [{name:"jonas", email:"shir.ez.alioffical@gmail.com"}]
 
 // console.log(users[0]?.name ?? "User array empty");
@@ -689,3 +688,75 @@
 
 // const value = Object.values(restaurant.openingHours)
 // console.log(value);
+
+const game = {
+  team1: "Bayern Munich",
+  team2: "Borrussia Dortmund",
+  players: [
+    [
+      "Neuer",
+      "Pavard",
+      "Martinez",
+      "Alaba",
+      "Davies",
+      "Kimmich",
+      "Goretzka",
+      "Coman",
+      "Muller",
+      "Gnarby",
+      "Lewandowski",
+    ],
+    [
+      "Burki",
+      "Schulz",
+      "Hummels",
+      "Akanji",
+      "Hakimi",
+      "Weigl",
+      "Witsel",
+      "Hazard",
+      "Brandt",
+      "Sancho",
+      "Gotze",
+    ],
+  ],
+  score: "4:0",
+  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+  date: "Nov 9th, 2037",
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+//.1
+for (const [i, item] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${item}`);
+}
+
+//.2
+const item = Object.values(game.odds);
+console.log(item);
+let sum = 0;
+for (const avr of item) {
+  sum += Number(avr);
+}
+console.log(`Sum is :${sum}`);
+console.log(`Average is : ${sum / 3}`);
+
+//.3
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === "x" ? "draw" : `Victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
+
+//.4
+
+
+const scorers = {};
+for (const player of game.scored) {;  
+  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+}
+console.log(scorers);
