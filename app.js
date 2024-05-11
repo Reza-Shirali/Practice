@@ -620,12 +620,27 @@ const restaurant = {
   },
 };
 
-const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 
-// for (const item of menu) {
-//   console.log(item);
+// // for (const item of menu) {
+// //   console.log(item);
+// // }
+
+// for (const [i, item] of menu.entries()) {
+//   console.log(`${i + 1}: ${item} `);
 // }
 
-for (const [i, item] of menu.entries()) {
-  console.log(`${i + 1}: ${item} `);
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours.fri?.open);
+
+const days = ['mon','tue','wed','thu','fri','sat','sun']
+
+for(const day of days){
+  const open = restaurant.openingHours[day]?.open ?? "closed";
+  console.log(`On ${day}, we open at ${open}`);
 }
+
+
+const users = [{name:"jonas", email:"shir.ez.alioffical@gmail.com"}]
+
+console.log(users[0]?.name ?? "User array empty");
