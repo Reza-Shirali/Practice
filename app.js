@@ -401,36 +401,36 @@
 //   startIndex : 2
 // })
 
-const restaurant = {
-  name: "Classico Italiano",
-  location: "via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0,
-      close: 24,
-    },
-  },
-  order: function (startIndex, mainIndex) {
-    return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
-  },
-  orderDelivery: function ({ address, mainIndex, time, startIndex }) {
-    console.log(address, time, startIndex, mainIndex);
-  },
-  orderPasta: function (ing1, ing2, ing3) {
-    console.log(`Here is your declicious pasta with ${ing1},${ing2},${ing3}`);
-  },
-};
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0,
+//       close: 24,
+//     },
+//   },
+//   order: function (startIndex, mainIndex) {
+//     return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelivery: function ({ address, mainIndex, time, startIndex }) {
+//     console.log(address, time, startIndex, mainIndex);
+//   },
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(`Here is your declicious pasta with ${ing1},${ing2},${ing3}`);
+//   },
+// };
 
 // const ingredients = [
 //   prompt(`Let's make pasta! Ingredient 1?`),
@@ -515,76 +515,117 @@ const restaurant = {
 
 // CHALLENGE
 
-const game = {
-  team1: "Bayern Munich",
-  team2: "Borrussia Dortmund",
-  players: [
-    [
-      "Neuer",
-      "Pavard",
-      "Martinez",
-      "Alaba",
-      "Davies",
-      "Kimmich",
-      "Goretzka",
-      "Coman",
-      "Muller",
-      "Gnarby",
-      "Lewandowski",
-    ],
-    [
-      "Burki",
-      "Schulz",
-      "Hummels",
-      "Akanji",
-      "Hakimi",
-      "Weigl",
-      "Witsel",
-      "Hazard",
-      "Brandt",
-      "Sancho",
-      "Gotze",
-    ],
-  ],
-  score: "4:0",
-  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
-  date: "Nov 9th, 2037",
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
+// const game = {
+//   team1: "Bayern Munich",
+//   team2: "Borrussia Dortmund",
+//   players: [
+//     [
+//       "Neuer",
+//       "Pavard",
+//       "Martinez",
+//       "Alaba",
+//       "Davies",
+//       "Kimmich",
+//       "Goretzka",
+//       "Coman",
+//       "Muller",
+//       "Gnarby",
+//       "Lewandowski",
+//     ],
+//     [
+//       "Burki",
+//       "Schulz",
+//       "Hummels",
+//       "Akanji",
+//       "Hakimi",
+//       "Weigl",
+//       "Witsel",
+//       "Hazard",
+//       "Brandt",
+//       "Sancho",
+//       "Gotze",
+//     ],
+//   ],
+//   score: "4:0",
+//   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+//   date: "Nov 9th, 2037",
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// // .1
+// const [players1, players2] = game.players;
+// console.log(players1, players2);
+
+// // .2
+// const [gk, ...fieldPlayers] = players1;
+// console.log(gk, fieldPlayers);
+
+// // .3
+// const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
+
+// // .4
+// const playersFinal1 = [...players1, "Thiago", "Coutinho", "Perisic"];
+// console.log(playersFinal1);
+
+// // .5
+// const { team1, x: draw, team2 } = game.odds;
+// console.log(team1, draw, team2);
+
+// // .6
+
+// const printGoals = (...players) => {
+//   console.log(players);
+//   console.log(`${players.length} goals were scored.`);
+// };
+
+// printGoals(...game.scored);
+
+// // .7
+//  team1 > team2 && console.log(`Team 2 is more likely to win`);
+//  team1 < team2 && console.log(`Team 1 is more likely to win`);
+
+const restaurant = {
+  name: "Classico Italiano",
+  location: "via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0,
+      close: 24,
+    },
+  },
+  order: function (startIndex, mainIndex) {
+    return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
+  },
+  orderDelivery: function ({ address, mainIndex, time, startIndex }) {
+    console.log(address, time, startIndex, mainIndex);
+  },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your declicious pasta with ${ing1},${ing2},${ing3}`);
   },
 };
 
-// .1
-const [players1, players2] = game.players;
-console.log(players1, players2);
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 
-// .2
-const [gk, ...fieldPlayers] = players1;
-console.log(gk, fieldPlayers);
+// for (const item of menu) {
+//   console.log(item);
+// }
 
-// .3
-const allPlayers = [...players1, ...players2];
-console.log(allPlayers);
-
-// .4
-const playersFinal1 = [...players1, "Thiago", "Coutinho", "Perisic"];
-console.log(playersFinal1);
-
-// .5
-const { team1, x: draw, team2 } = game.odds;
-console.log(team1, draw, team2);
-
-// .6
-
-const printGoals = (...players) => {
-  console.log(players);
-  console.log(`${players.length} goals were scored.`);
-};
-
-printGoals(...game.scored);
-
-// .7
- team1 > team2 && console.log(`Team 2 is more likely to win`);
- team1 < team2 && console.log(`Team 1 is more likely to win`);
+for (const [i, item] of menu.entries()) {
+  console.log(`${i + 1}: ${item} `);
+}
