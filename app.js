@@ -754,16 +754,15 @@
 
 // //.4
 
-
 // const scorers = {};
-// for (const player of game.scored) {;  
+// for (const player of game.scored) {;
 //   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 // }
 // console.log(scorers);
 
-// const newArr = ['pizza','pasta','pizza','pasta','kabab']
-// const orderSet = new Set(newArr)
-// console.log(orderSet);
+const newArr = ["pizza", "pasta", "pizza", "pasta", "kabab"];
+const orderSet = new Set(newArr);
+console.log(orderSet);
 // console.log(orderSet.size);
 // console.log(orderSet.has("bobs"));
 // console.log(orderSet.has("pizza"));
@@ -782,19 +781,53 @@
 
 // console.log(rest.has(1));
 
-const question = new Map([
-  ['question','What is the best programming Language is the world? '],
-  [1,"C"],
-  [2,"Java"],
-  [3,"Javascript"],
-  [true,'Correct :)'],
-  [false,"Try Again :("]
-])
-console.log(question.get("question"));
-for(const [key,value] of question){
-  if(typeof key === "number") console.log(`Answer ${key} : ${value}`);
+// const question = new Map([
+//   ['question','What is the best programming Language is the world? '],
+//   [1,"C"],
+//   [2,"Java"],
+//   [3,"Javascript"],
+//   [true,'Correct :)'],
+//   [false,"Try Again :("]
+// ])
+// console.log(question.get("question"));
+// for(const [key,value] of question){
+//   if(typeof key === "number") console.log(`Answer ${key} : ${value}`);
+// }
+
+// const answerUser = Number(prompt("Your answer:"))
+
+// answerUser === 3 ? console.log(question.get(true)) : console.log(question.get(false));
+
+const gameEvents = new Map([
+  [17, "Goal⚽"],
+  [36, "Substitution"],
+  [47, "Goal⚽"],
+  [61, "Substitution"],
+  [64, "🟨 Yellow card"],
+  [69, "🔴 Red card"],
+  [70, "Substitution"],
+  [72, "Substitution"],
+  [76, "Goal⚽"],
+  [80, "Goal⚽"],
+  [92, "🟨 Yellow card"],
+]);
+
+//.1
+const event = new Set(gameEvents.values())
+console.log(event);
+
+//.2
+gameEvents.delete(64)
+console.log(gameEvents);
+
+//.3
+const newStr = `An event happened, on average , every ${90/gameEvents.size} minutes.` 
+console.log(newStr);
+const time = [...gameEvents.keys()].pop()
+console.log(time);
+console.log(`An event happened, on average , every ${time/gameEvents.size} minutes.`);
+
+//.4
+for(const [key , value] of gameEvents){
+  key < 45 ? console.log(`[FIRST HALF] ${key} : ${value}`)  : console.log(`[SECOND HALF] ${key} : ${value}`)
 }
-
-const answerUser = Number(prompt("Your answer:"))
-
-answerUser === 3 ? console.log(question.get(true)) : console.log(question.get(false));;
