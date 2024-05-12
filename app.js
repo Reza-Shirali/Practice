@@ -760,9 +760,9 @@
 // }
 // console.log(scorers);
 
-const newArr = ["pizza", "pasta", "pizza", "pasta", "kabab"];
-const orderSet = new Set(newArr);
-console.log(orderSet);
+// const newArr = ["pizza", "pasta", "pizza", "pasta", "kabab"];
+// const orderSet = new Set(newArr);
+// console.log(orderSet);
 // console.log(orderSet.size);
 // console.log(orderSet.has("bobs"));
 // console.log(orderSet.has("pizza"));
@@ -798,36 +798,57 @@ console.log(orderSet);
 
 // answerUser === 3 ? console.log(question.get(true)) : console.log(question.get(false));
 
-const gameEvents = new Map([
-  [17, "Goal⚽"],
-  [36, "Substitution"],
-  [47, "Goal⚽"],
-  [61, "Substitution"],
-  [64, "🟨 Yellow card"],
-  [69, "🔴 Red card"],
-  [70, "Substitution"],
-  [72, "Substitution"],
-  [76, "Goal⚽"],
-  [80, "Goal⚽"],
-  [92, "🟨 Yellow card"],
-]);
+// const gameEvents = new Map([
+//   [17, "Goal⚽"],
+//   [36, "Substitution"],
+//   [47, "Goal⚽"],
+//   [61, "Substitution"],
+//   [64, "🟨 Yellow card"],
+//   [69, "🔴 Red card"],
+//   [70, "Substitution"],
+//   [72, "Substitution"],
+//   [76, "Goal⚽"],
+//   [80, "Goal⚽"],
+//   [92, "🟨 Yellow card"],
+// ]);
 
-//.1
-const event = new Set(gameEvents.values())
-console.log(event);
+// //.1
 
-//.2
-gameEvents.delete(64)
-console.log(gameEvents);
+// const events = new Set(gameEvents.values());
+// console.log(events);
 
-//.3
-const newStr = `An event happened, on average , every ${90/gameEvents.size} minutes.` 
-console.log(newStr);
-const time = [...gameEvents.keys()].pop()
-console.log(time);
-console.log(`An event happened, on average , every ${time/gameEvents.size} minutes.`);
+// //.2
 
-//.4
-for(const [key , value] of gameEvents){
-  key < 45 ? console.log(`[FIRST HALF] ${key} : ${value}`)  : console.log(`[SECOND HALF] ${key} : ${value}`)
-}
+// gameEvents.delete(64);
+// console.log(gameEvents);
+
+// //.3
+
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size} minutes`
+// );
+
+// //.3
+// const time = [...gameEvents.keys()].pop()
+// console.log(
+//   `An event happened, on average, every ${time / gameEvents.size} minutes`
+// );
+
+// //.4
+// for(const [key,value] of gameEvents){
+//   key < 45 ? console.log(`[FIRST HALF] ${key} : ${value}`) : console.log(`[SECOND HALF] ${key} : ${value}`);
+// }
+
+// const checkMiddleSeat = (seat) => {
+//   const s = seat.slice(-1);
+//   if (s === "B" || s === "E") {
+//     console.log(`You Got the middle seat 😢`);
+//   } else {
+//     console.log(`You Got Lucky❤️🌟`);
+//   }
+// };
+
+// checkMiddleSeat("11B");
+// checkMiddleSeat("21C");
+// checkMiddleSeat("4E");
+
