@@ -773,3 +773,11 @@
 // console.log(orderSet);
 // orderSet.clear()
 // console.log(orderSet);
+
+// const rest = new Map();
+// rest.set("Name","Reza")
+// rest.set(1,"Pizza")
+// rest.set(2,"Pasta")
+// console.log(rest);
+
+// console.log(rest.has(1));
