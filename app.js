@@ -844,3 +844,15 @@
 
 // console.log(str.replaceAll('reza','POWER'));
 
+const capitalizeName = (name) => {
+  const names = name.split(" ");
+  console.log(names);
+  const namesUpper = [];
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1).toLowerCase());
+    console.log(namesUpper);
+  }
+  console.log(namesUpper.join(" "));
+};
+
+capitalizeName("rEzA shRiaLI");
