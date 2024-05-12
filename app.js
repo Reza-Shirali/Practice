@@ -837,22 +837,25 @@
 // //.4
 
 // for(const [key,value] of gameEvents){
-//   key <45 ? console.log(`[FIRST HALF] ${key} : ${value}`) : console.log(`[SECOND HALF] ${key} : ${value}`)
+//   key < 45 ? console.log(`[FIRST HALF ${key} : ${value}`) : console.log(`[Second Half] ${key} : ${value}`);
 // }
+
 
 // const str =  `reza shirali bayern munich reza bayern reza`
 
 // console.log(str.replaceAll('reza','POWER'));
 
-const capitalizeName = (name) => {
-  const names = name.split(" ");
-  console.log(names);
-  const namesUpper = [];
-  for (const n of names) {
-    namesUpper.push(n[0].toUpperCase() + n.slice(1).toLowerCase());
-    console.log(namesUpper);
-  }
-  console.log(namesUpper.join(" "));
-};
+// const capitalizeName = (name) => {
+//   const names = name.split(" ");
+//   console.log(names);
+//   const namesUpper = [];
+//   for (const n of names) {
+//     namesUpper.push(n[0].toUpperCase() + n.slice(1).toLowerCase());
+//     console.log(namesUpper);
+//   }
+//   console.log(namesUpper.join(" "));
+// };
 
-capitalizeName("rEzA shRiaLI");
+// capitalizeName("rEzA shRiaLI");
+
+
