@@ -781,3 +781,20 @@
 // console.log(rest);
 
 // console.log(rest.has(1));
+
+const question = new Map([
+  ['question','What is the best programming Language is the world? '],
+  [1,"C"],
+  [2,"Java"],
+  [3,"Javascript"],
+  [true,'Correct :)'],
+  [false,"Try Again :("]
+])
+console.log(question.get("question"));
+for(const [key,value] of question){
+  if(typeof key === "number") console.log(`Answer ${key} : ${value}`);
+}
+
+const answerUser = Number(prompt("Your answer:"))
+
+answerUser === 3 ? console.log(question.get(true)) : console.log(question.get(false));;
