@@ -840,7 +840,6 @@
 //   key < 45 ? console.log(`[FIRST HALF ${key} : ${value}`) : console.log(`[Second Half] ${key} : ${value}`);
 // }
 
-
 // const str =  `reza shirali bayern munich reza bayern reza`
 
 // console.log(str.replaceAll('reza','POWER'));
@@ -871,3 +870,21 @@
 
 // createBooking('LH232')
 // createBooking('LH232',12,128)
+
+const oneWord = (str) => {
+  return str.replace(/ /g, "").toLowerCase();
+};
+
+const upperFirstWord = (str) => {
+  const [first, ...others] = str.split(" ");
+  console.log(first);
+  return [first.toUpperCase(), ...others].join(" ");
+};
+
+const transform = (str, fn) => {
+  console.log(`Original String: ${str}`);
+  console.log(`Transform string: ${fn(str)}`);
+  console.log(`Transform by: ${fn.name}`);
+};
+
+transform("JavaScript is the best language", upperFirstWord);
