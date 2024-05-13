@@ -871,20 +871,30 @@
 // createBooking('LH232')
 // createBooking('LH232',12,128)
 
-const oneWord = (str) => {
-  return str.replace(/ /g, "").toLowerCase();
+// const oneWord = (str) => {
+//   return str.replace(/ /g, "").toLowerCase();
+// };
+
+// const upperFirstWord = (str) => {
+//   const [first, ...others] = str.split(" ");
+//   console.log(first);
+//   return [first.toUpperCase(), ...others].join(" ");
+// };
+
+// const transform = (str, fn) => {
+//   console.log(`Original String: ${str}`);
+//   console.log(`Transform string: ${fn(str)}`);
+//   console.log(`Transform by: ${fn.name}`);
+// };
+
+// transform("JavaScript is the best language", upperFirstWord);
+
+const greet = (greeting) => {
+    return (name) => {
+        console.log(`${greeting} ${name}`);
+    }
 };
 
-const upperFirstWord = (str) => {
-  const [first, ...others] = str.split(" ");
-  console.log(first);
-  return [first.toUpperCase(), ...others].join(" ");
-};
-
-const transform = (str, fn) => {
-  console.log(`Original String: ${str}`);
-  console.log(`Transform string: ${fn(str)}`);
-  console.log(`Transform by: ${fn.name}`);
-};
-
-transform("JavaScript is the best language", upperFirstWord);
+const greeterHey = greet('Hey')
+greeterHey("Jonas")
+greeterHey("reza")
