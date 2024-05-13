@@ -858,16 +858,16 @@
 
 // capitalizeName("rEzA shRiaLI");
 
-const bookings = []
-const createBooking = (flightNum,numPassenger = 1 , price = 199) =>{
-    const booking = {
-        flightNum,
-        numPassenger,
-        price
-    }
-    console.log(booking);
-    bookings.push(booking)
-}
+// const bookings = []
+// const createBooking = (flightNum,numPassenger = 1 , price = 199) =>{
+//     const booking = {
+//         flightNum,
+//         numPassenger,
+//         price
+//     }
+//     console.log(booking);
+//     bookings.push(booking)
+// }
 
-createBooking('LH232')
-createBooking('LH232',12,128)
+// createBooking('LH232')
+// createBooking('LH232',12,128)
