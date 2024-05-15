@@ -889,12 +889,31 @@
 
 // transform("JavaScript is the best language", upperFirstWord);
 
-const greet = (greeting) => {
-    return (name) => {
-        console.log(`${greeting} ${name}`);
-    }
+// const greet = (greeting) => {
+//     return (name) => {
+//         console.log(`${greeting} ${name}`);
+//     }
+// };
+
+// const greeterHey = greet('Hey')
+// greeterHey("Jonas")
+// greeterHey("reza")
+
+const lufthansa = {
+  airline: `Lufthansa`,
+  iataCode: "LH",
+  booking: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.booking.push({
+      flight: `${this.airline} flight ${this.iataCode}${flightNum}`,
+    });
+  },
 };
 
-const greeterHey = greet('Hey')
-greeterHey("Jonas")
-greeterHey("reza")
+lufthansa.book(250,'RezaShirali')
+lufthansa.book(120,'Hossain')
+
+console.log(lufthansa.booking);
