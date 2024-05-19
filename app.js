@@ -899,21 +899,21 @@
 // greeterHey("Jonas")
 // greeterHey("reza")
 
-const lufthansa = {
-  airline: `Lufthansa`,
-  iataCode: "LH",
-  booking: [],
-  book(flightNum, name) {
-    console.log(
-      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
-    );
-    this.booking.push({
-      flight: `${this.airline} flight ${this.iataCode}${flightNum}`,
-    });
-  },
-};
+// const lufthansa = {
+//   airline: `Lufthansa`,
+//   iataCode: "LH",
+//   booking: [],
+//   book(flightNum, name) {
+//     console.log(
+//       `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+//     );
+//     this.booking.push({
+//       flight: `${this.airline} flight ${this.iataCode}${flightNum}`,
+//     });
+//   },
+// };
 
-lufthansa.book(250,'RezaShirali')
-lufthansa.book(120,'Hossain')
+// lufthansa.book(250,'RezaShirali')
+// lufthansa.book(120,'Hossain')
+// console.log(lufthansa.booking);
 
-console.log(lufthansa.booking);
